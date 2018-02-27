@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>javascript重点例子</title>
+	
+</head>
+<body>
+	<script type="text/javascript">
+	'use strict'
+	//判断一个值是不是数字
+	var num = 1;
+	if(Number(num) === num){
+		console.log('是数字')
+	}else if(Number(num) !== num){
+		console.log('不是数字')
+	}
+	//1、怎么让数字保留n位小数？ 
+   //数字.toFixed(n);保留的小数会自动四舍五入
+   var num = 123.567;   num.toFixed(2);
+	
+	//5、输入年份，判断是否为闰年
+		//闰年的条件是:一:能被4整除，但不能被100整除的年份(例如2008是闰年，1900不是闰年)  二:能被400整除的年份(例如2000年)也是闰年。
+		var year = 2016;
+		if(year%4 == 0 && year%100 !=0 || year%400 == 0){
+			console.log('是闰年')
+		}else{
+			console.log('不是闰年')
+		}
+
+	//
+	//1．制作一个表单 
+		//要求：1）点击保存按钮时，使用JS判断用户的联系电话是否为纯数字，如果用户输入有错误，使用alert()弹框警告
+		// 2）判断用户名是否填写，如果空白，使用alert弹框警告
+
+		// baocun.onclick = function(){
+		// 	var u = userName.value;
+		// 	switch(u){
+		// 		case '':
+		// 		alert('请填写用户名');
+		// 	}
+			
+		// 	var p = phoneNumber.value;
+		// 	if(Number(p) != parseInt(p) || Number(p) <= 0 ){
+		// 		alert('请输入正确的电话');
+		// 	}
+		// }
+	
+	//1、使用三元表达式实现：
+	//    如果 a 和 b 的和 大于 b和c的乘积，则d=a+b，否则d=b*c
+	var a = 10,
+	b = 6,
+	c = 3,
+	d;
+	d = a+b > b*c ? a+b : b*c;
+	
+	//6、输出20-80之间能被3整除的整数，每5个一行
+	//
+	var m = 20;
+	var count = 0;
+	while(m<=80){
+		if(m%3 == 0){
+			document.write(m+' ');
+			count++;
+			if(count%5 == 0){
+				document.write('<br>');
+			}
+		}
+		m++;
+	}
+	document.write('<br>');
+	//5、打印一个三角形
+	//|  *    	1行 2空格=3-1 1颗星=2*1-1
+	//| *** 	2行 1空格=3-2 3颗星=2*2-1
+	//|***** 	3行 0空格=3-3 5颗星=2*3-1
+	
+	for(var i=1; i<=3; i++){
+		for(var k=1; k<=3-i; k++){
+			document.write('&nbsp;')
+		}
+		for(var j=1; j<=2*i-1; j++){
+			document.write('*');
+		}
+		document.write('<br>')
+	}
+	//3、点击【换一换】生成新的验证码
+	//1234
+	// btn.onclick = function(){
+	// 	var m = '';
+	// 	for(var i=1; i<=4; i++){
+	// 		var num = parseInt(Math.random()*10)
+	// 		m += num;
+	// 	}
+	// 	container.innerHTML = m;
+	// }
+	//4、99乘法表
+	//
+	for(var i=1; i<=9; i++){
+		for(var j=1; j<=i; j++){
+			document.write(i + '×' + j + '=' + i*j + ' ')
+		}
+		document.write('<br>')
+	}
+	//6、求1+2!+3!+4!...+20!的值\
+	//1 1
+	//2 1*2
+	//3 1*2*3
+	////每一个都是前面的积乘当前行数序号；
+	var sum = 0;
+	var mul = 1;
+	for(var i=1; i<=20; i++){
+		mul*=i;
+		sum += mul;
+	}
+	console.log(sum);
+	//5．利用递归求100的阶乘
+	//
+	function fact(num){
+		if(num == 1){
+			return 1;
+		}
+		return num*fact(num-1);
+	}
+	console.log(fact(100));
+	//6．利用递归求斐波那契数列
+	//1 1 2 3 5 8 13 ……
+	function fact1(n){
+		if(n == 1 || n == 2){
+			return 1;
+		}
+		return fact1(n-1)+fact1(n-2);
+	}
+	console.log(fact1(10));
+	
+	//晚上
+	//1、篮球从5米高的地方掉下来，每次弹起的高度是原来的30%，经过几次弹起，篮球的高度是0.1米。
+	//1 5*0.3
+	//2 5*0.3*0.3
+	//3 5*0.3*0.3*0.3
+	//5重复的乘0.3
+	var count=0;
+	var s = 5;
+	while(s >= 0.1){
+		s *= 0.3;
+		count++;
+	}
+	console.log(count);
+	//2、有一个棋盘，有64个方格，在第一个方格里面放1粒芝麻重量是0.00001kg，第二个里面放2粒，第三个里面放4，棋盘上放的所有芝麻的重量。
+	//1 1
+	//2 2=2
+	//3 4=2*2 
+	//4 8=2*2*2
+	//5 16=2*2*2*2
+	//从第二行开始，每一个都是前面的积乘2；
+	var sum = 1;
+	var mul =1;
+	for(var i=2; i<=64; i++){
+		mul*=2;
+		sum += mul;
+	}
+	console.log(sum);
+	document.write('<br>')
+	//3、输出100-200之间所有的素数（15k薪资）
+	//从2开始到num-1，有一个能被num整除就不是素数；
+	for(var num=100; num<=200; num++){
+		var k = true
+		for(var i=2; i<=num-1; i++){
+			if(num%i == 0){
+				k = false;
+				break;
+			}
+		}
+		if(k == true){
+			console.log(num)
+		}
+	}
+	//2.编写一个函数，计算三个数字的大小，按从小到大顺序输出
+	//
+	function compare(a,b,c){
+		var d;
+		if(a>b){
+			d = b;
+			b = a;
+			a = d;
+		}
+		if(b>c){
+			d = c;
+			c = b;
+			b = d;
+		}
+		if(a>b){
+			d = b;
+			b = a;
+			a = d;
+		}
+		console.log(a,b,c);
+	}
+	compare(19,2,3)
+	//2．定义一个功能getMin,传入3个数，返回最小的数
+	//
+	function getMin1(a,b,c){
+		var min = a > b ? b : a;
+		return min > c ? c : min;
+	}
+	console.log(getMin(5,4,6));
+
+
+	//1.编写一个函数，输出任意两个数字m-n之间所能组成的奇数个数(m、n 都小于10)
+	// 比如： 计算0-3之间能组成的奇数个是01、21、03、13、23、31
+	// 
+	function num2(m,n){
+		for(var i=m; i<=n; i++){
+			for(var j=m; j<=n; j++){
+				var num = i*10 +j;
+				if(i == j){
+					continue;
+				}
+				if(num%2 == 1){
+					if(num<10){
+						num = '0' +num
+					}
+					console.log(num)
+				}
+			}
+		}
+	}
+	num2(1,4);
+		//1.编写一个函数，输出任意两个数字m-n之间所能组成的奇数个数(m、n 都小于10)
+	// 比如： 计算0-3之间能组成的奇数个是01、21、03、13、23、31
+	// 
+	function num2(m,n){
+		for(var i=m; i<=n; i++){
+			for(var j=m; j<=n; j++){
+				var num = ''+i+j;
+				if(i == j){
+					continue;
+				}
+				if(num%2 == 1){
+					console.log(num)
+				}
+			}
+		}
+	}
+	num2(1,4);
+	//7．利用递归求两个数字的最大公约数
+	function fact2(m,n){
+		var r =m%n;
+		m = n;
+		n = r;
+		if(r == 0){
+			return m;
+		}
+		return fact2(m,n)
+	}
+	console.log(fact2(90,58));
+
+	//求任意长度的斐波那契数列用数组的方式表现（从1开始,最小两项）
+	//
+	function fibonacci(size) {
+		var first = 1, second = 1, third, count = 2, arr = [first, second];
+		if(size < 2){
+	 		return '不能小于2';
+		}
+		while(count++ < size) {
+		    third = first + second;
+		    first = second;
+		    second = third;
+		    arr.push(third);
+		}
+		return arr;
+}
+console.log(fibonacci(2));
+	</script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>淡入淡出轮播</title>
+		<style>
+			
+			.nav {
+				width: 400px;
+				height: 300px;
+				margin: 0 auto;
+				position: relative;
+				text-align: center;
+			}
+			.nav img {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.arrow {
+				position: absolute;
+				width: 50px;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				top: 50%;
+				margin-top: -20px;
+				background-color: rgba(0,0,0,0.6);
+				opacity: 0.4;
+			}
+			.arrow:hover {
+				opacity: 1;
+			}
+			.arrow.arrowL {
+				left: 0;
+			}
+			.arrow.arrowR {
+				right: 0;
+			}
+			a {
+				text-decoration: none;
+				color: #fff;
+				font-size: 20px;
+			}
+			.img {
+				opacity: 0;
+			}
+			.img:first-child {
+				opacity: 1;
+			}
+			.circles {
+				width: 100%;
+				text-align: center;
+				position: absolute;
+				bottom: 20px;
+				left:0;
+			}
+			.circles ul {
+				
+				display: inline-block;
+				list-style: none;
+			}
+			ul li {
+				float: left;
+				width: 12px;
+				height: 12px;
+				
+				border-radius: 6px;
+				background-color: #fff;
+				margin-right: 15px;
+				cursor: pointer;
+			}
+			ul li.current {
+				background-color: #c33;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="nav">
+			<img src="img/photo01.jpg" class='img'>
+			<img src="img/photo02.jpg" class='img'>
+			<img src="img/photo03.jpg" class='img'>
+			<img src="img/photo04.jpg" class='img'>
+			<img src="img/photo05.jpg" class='img'>
+			<a href="javascript:;" class="arrow arrowL">&lt;</a>
+			<a href="javascript:;" class="arrow arrowR">&gt;</a>
+			<div class="circles">
+				<ul>
+					<li class="current"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			
+		</div>
+		<script src="js/$.js"></script>
+		<script>
+			'use strict'
+		window.onload = function(){
+	
+			//5淡入淡出轮播
+			
+			var imgs = $('.img'),
+				arrow = $('.arrow'),
+				timer = null;
+			var now=0,next=0,len=imgs.length;
+			arrow[1].onclick = function(){
+				next++;
+				next %= len;
+				imgSwitch();
+			}
+			arrow[0].onclick = function(){
+				next--;
+				if(next<0){
+					next=len-1;
+				}
+				imgSwitch();
+			}
+			timer = setInterval(function(){
+				function autoPlay(){
+					next++;
+					next %= len;
+					imgSwitch()
+				}
+				autoPlay();
+			},2000)
+			var nav = $('.nav')[0];
+			nav.onmouseenter = function(){
+				
+				clearInterval(timer);
+			}
+			nav.onmouseleave = function(){
+				timer = setInterval(function(){
+					function autoPlay(){
+						next++;
+						next %= len;
+						imgSwitch()
+					}
+					autoPlay();
+				},2000)
+				
+			}
+			var lis = $('li');
+			
+			for(var i=0,len=lis.length; i<len; i++){
+				lis[i].index = i;
+				lis[i].onclick = function(){
+					next = this.index;
+					imgSwitch();
+				}
+			}
+			var width = parseInt( css(lis[0],'width') );
+			function imgSwitch(){
+				animate(imgs[now],{opacity:0});
+				animate(imgs[next],{opacity:1});
+				removeClass(lis[now],'current');
+				addClass(lis[next],'current');
+				animate(lis[now],{width:width});
+				animate(lis[next],{width:width+6});
+				now = next;
+			}
+		}
+		</script>
+	</body>
+</html>

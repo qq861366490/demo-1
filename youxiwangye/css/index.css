@@ -1,0 +1,408 @@
+header {
+  width: 100%;
+  height: 0.74rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 4;
+}
+header .rgba {
+  width: 100%;
+  height: 0.34rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  background: rgba(255, 255, 255, 0.3);
+}
+header .search {
+  display: inline-block;
+  width: 3.66rem;
+  height: 0.43rem;
+  margin-left: 18%;
+  margin-top: 0.11rem;
+}
+header .search input {
+  border: none;
+  width: 3.1rem;
+  height: 0.46rem;
+  line-height: 0.46rem;
+  box-sizing: border-box;
+  padding: 0 8px;
+  float: left;
+  display: block;
+  background-color: #eceded;
+  border-top-left-radius: 0.08rem;
+  border-bottom-left-radius: 0.08rem;
+}
+header .search a.iconfont {
+  float: right;
+  display: block;
+  width: 0.53rem;
+  height: 0.46rem;
+  line-height: 0.46rem;
+  text-align: center;
+  background-color: #eceded;
+  color: #999;
+  font-size: 0.3rem;
+  border-top-right-radius: 0.08rem;
+  border-bottom-right-radius: 0.08rem;
+}
+header .strategy {
+  display: inline-block;
+  width: 0.9rem;
+  min-width: 54px;
+  height: 0.46rem;
+  margin-left: 0.24rem;
+}
+header .strategy a {
+  width: 100%;
+  display: block;
+}
+header .strategy a span {
+  float: left;
+  display: block;
+  width: 0.46rem;
+  height: 0.46rem;
+  line-height: 0.46rem;
+  text-align: center;
+  color: #fff;
+  font-size: 0.45rem;
+}
+header .strategy a p {
+  float: right;
+  display: block;
+  width: 0.32rem;
+  min-width: 24px;
+  height: auto;
+  min-height: 24px;
+  font-size: 0.15rem;
+  color: #fff;
+}
+.banner {
+  width: 100%;
+}
+.banner .swiper {
+  width: 100%;
+}
+.banner .swiper .img-con {
+  width: 100%;
+  height: 3.36rem;
+  overflow: hidden;
+}
+.banner .swiper .img-con img {
+  width: 100%;
+  height: auto;
+}
+.main {
+  width: 100%;
+  height: auto;
+  border-bottom: 0.09rem solid #ebebeb;
+}
+.main .main-left {
+  width: 67%;
+  float: left;
+}
+.main .main-left .main-left-t {
+  width: 98.4%;
+  height: 2.04rem;
+  margin-left: 0.07rem;
+  padding-top: 0.34rem;
+  border-bottom: 0.02rem solid #ebebeb;
+  position: relative;
+}
+.main .main-left .main-left-t .content p {
+  font-size: 0.28rem;
+  color: #4c4c4c;
+}
+.main .main-left .main-left-t .content span {
+  font-size: 0.22rem;
+  color: #8a8a8a;
+}
+.main .main-left .main-left-t .img-con1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1.44rem;
+  height: 1.14rem;
+  z-index: 1;
+  overflow: hidden;
+}
+.main .main-left .main-left-t .img-con1 img {
+  width: 100%;
+  height: auto;
+}
+.main .main-left .main-left-t .img-con2 {
+  position: absolute;
+  bottom: 0;
+  left: 1.14rem;
+  width: 1.1rem;
+  height: 1.06rem;
+  z-index: 0;
+  overflow: hidden;
+}
+.main .main-left .main-left-t .img-con2 img {
+  width: 100%;
+  height: auto;
+}
+.main .main-left .main-left-t .img-con3 {
+  position: absolute;
+  bottom: 0;
+  left: 2.34rem;
+  width: 1.58rem;
+  height: 1.69rem;
+  overflow: hidden;
+}
+.main .main-left .main-left-t .img-con3 img {
+  width: 100%;
+  height: auto;
+}
+.main .main-left .main-left-b {
+  width: 98.4%;
+  height: 2.04rem;
+  margin-left: 0.07rem;
+  padding-top: 0.34rem;
+  position: relative;
+}
+.main .main-left .main-left-b .content p {
+  font-size: 0.28rem;
+  color: #4c4c4c;
+}
+.main .main-left .main-left-b .content span {
+  font-size: 0.22rem;
+  color: #8a8a8a;
+}
+.main .main-left .main-left-b .img-con1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1.44rem;
+  height: 1.14rem;
+  z-index: 1;
+  overflow: hidden;
+}
+.main .main-left .main-left-b .img-con1 img {
+  width: 100%;
+  height: auto;
+}
+.main .main-left .main-left-b .img-con2 {
+  position: absolute;
+  bottom: 0;
+  left: 1.44rem;
+  width: 1.1rem;
+  height: 1.06rem;
+  z-index: 0;
+  overflow: hidden;
+}
+.main .main-left .main-left-b .img-con2 img {
+  width: 100%;
+  height: auto;
+}
+.main .main-left .main-left-b .img-con3 {
+  position: absolute;
+  bottom: 0;
+  left: 2.34rem;
+  width: 1.58rem;
+  height: 1.69rem;
+  overflow: hidden;
+}
+.main .main-left .main-left-b .img-con3 img {
+  width: 100%;
+  height: auto;
+}
+.main .main-right {
+  width: 33%;
+  float: left;
+  height: auto;
+  border-left: 0.02rem solid #ebebeb;
+  box-sizing: border-box;
+}
+.main .main-right .item {
+  width: 2rem;
+  height: 1.6rem;
+  box-sizing: border-box;
+  padding: 0.24rem 0.1rem 0.2rem 0.20rem;
+}
+.main .main-right .item .title a {
+  display: block;
+  text-align: left;
+}
+.main .main-right .item .title a span {
+  display: inline-block;
+  font-size: 0.3rem;
+  color: #ff4343;
+}
+.main .main-right .item .title a p {
+  display: inline-block;
+  font-size: 0.3rem;
+  color: #ff4343;
+}
+.main .main-right .item .content {
+  margin-top: 0.16rem;
+}
+.main .main-right .item .content a {
+  display: block;
+  font-size: 0.2rem;
+  line-height: 0.26rem;
+  color: #8a8a8a;
+  text-align: left;
+}
+.main .main-right .main-right-t {
+  border-bottom: 0.02rem solid #ebebeb;
+}
+.main .main-right .main-right-m {
+  border-bottom: 0.02rem solid #ebebeb;
+}
+.nav {
+  width: 100%;
+  height: auto;
+}
+.nav ul {
+  width: 100%;
+  height: 1.6rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.nav ul li {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.nav ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 0.3rem;
+  box-sizing: border-box;
+}
+.nav ul li a span {
+  display: inline-block;
+  width: 0.64rem;
+  height: 0.64rem;
+  line-height: 0.64rem;
+  text-align: center;
+  font-size: 0.36rem;
+  border-radius: 50%;
+  background-color: #f1cb34;
+  color: #fff;
+}
+.nav ul li a p {
+  margin-top: 0.16rem;
+  color: #4c4c4c;
+  font-size: 0.23rem;
+}
+.nav ul li:nth-child(1) {
+  border-right: 1px solid #ebebeb;
+}
+.nav ul li:nth-child(1) a span {
+  background-color: #ff7a7b;
+}
+.nav ul li:nth-child(2) {
+  border-right: 1px solid #ebebeb;
+}
+.nav ul li:nth-child(3) {
+  border-right: 1px solid #ebebeb;
+}
+.nav ul li:nth-child(3) a span {
+  background-color: #86cb4e;
+}
+.nav ul li:nth-child(4) a span {
+  background-color: #7095ff;
+}
+.list {
+  width: 100%;
+  height: 3.94rem;
+  background-color: #ebebeb;
+  padding: 0.09rem;
+  box-sizing: border-box;
+}
+.list ul {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.list ul li {
+  float: left;
+  width: 50%;
+  height: 1.24rem;
+  border-top: 0.02rem solid #fdfdfd;
+  border-left: 1px solid #fdfdfd;
+  padding: 0.16rem;
+  box-sizing: border-box;
+}
+.list ul li a {
+  box-sizing: border-box;
+}
+.list ul li a div.img {
+  width: 0.9rem;
+  height: 0.9rem;
+  float: left;
+  margin-top: 0.06rem;
+}
+.list ul li a div.content {
+  width: 1.74rem;
+  height: 0.9rem;
+  float: right;
+}
+.list ul li a div.content p:nth-child(1) {
+  font-size: 0.22rem;
+  color: #4c4c4c;
+}
+.list ul li a div.content p:nth-child(2) {
+  font-size: 0.16rem;
+  color: #8a8a8a;
+  margin-top: 0.06rem;
+}
+.list ul li a div.content div {
+  width: 　100%;
+  min-width: 116px;
+  margin-top: 0.06rem;
+}
+.list ul li a div.content div span {
+  display: block;
+  float: left;
+  padding: 0 0.05rem;
+  border: 1px solid #7095ff;
+  border-radius: 0.05rem;
+  font-size: 0.12rem;
+  color: #7095ff;
+  margin-right: 0.08rem;
+}
+.list ul li:nth-child(1) {
+  border-top: none;
+}
+.list ul li:nth-child(1) a div.img {
+  background: url("../imgs/3-1.png") no-repeat -0.06rem -0.11rem;
+  background-size: 0.9rem auto;
+}
+.list ul li:nth-child(2) {
+  border-top: none;
+}
+.list ul li:nth-child(2) a div.img {
+  background: url("../imgs/3-2.png") no-repeat -0.06rem -0.11rem;
+  background-size: 0.9rem auto;
+}
+.list ul li:nth-child(3) a div.img {
+  background: url("../imgs/3-1.png") no-repeat -0.06rem -1.12rem;
+  background-size: 0.9rem auto;
+}
+.list ul li:nth-child(4) a div.img {
+  background: url("../imgs/3-2.png") no-repeat -0.06rem -1.12rem;
+  background-size: 0.9rem auto;
+}
+.list ul li:nth-child(5) a div.img {
+  background: url("../imgs/3-1.png") no-repeat -0.06rem -2.25rem;
+  background-size: 0.9rem auto;
+}
+.list ul li:nth-child(6) a div.img {
+  background: url("../imgs/3-2.png") no-repeat -0.06rem -2.25rem;
+  background-size: 0.9rem auto;
+}
+.list ul li:nth-child(odd) {
+  border-left: none;
+}

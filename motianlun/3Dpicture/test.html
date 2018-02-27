@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+		.main{
+			perspective: 1000px;
+		}
+		.box{
+			transform-style: preserve-3d;
+			height:200px;
+			width: 150px;
+			position: relative;
+			margin: 150px auto;
+			transform: rotateY(3deg);
+			animation: wp 10s infinite linear;
+			
+		}
+		.box div{
+			height: 200px;
+			width: 150px;
+			position: absolute;
+			top: 0;
+			left: 0;	
+		}
+		img{
+			height: 200px;
+			width: 150px;
+		}
+		
+		.box div:nth-child(1){
+			transform: translateZ(300px);
+		}
+		.box div:nth-child(2){
+			transform:rotateY(30deg) translateZ(300px);
+		}
+		.box div:nth-child(3){
+			transform:rotateY(60deg) translateZ(300px);
+		}
+		.box div:nth-child(4){
+			transform:rotateY(90deg) translateZ(300px);
+		}
+		.box div:nth-child(5){
+			transform:rotateY(120deg) translateZ(300px);
+		}
+		.box div:nth-child(6){
+			transform:rotateY(150deg) translateZ(300px);
+		}
+		.box div:nth-child(7){
+			transform:rotateY(180deg) translateZ(300px);
+		}
+		.box div:nth-child(8){
+			transform:rotateY(210deg) translateZ(300px);
+		}
+		.box div:nth-child(9){
+			transform:rotateY(240deg) translateZ(300px);
+		}
+		.box div:nth-child(10){
+			transform:rotateY(270deg) translateZ(300px);
+		}
+		.box div:nth-child(11){
+			transform:rotateY(300deg) translateZ(300px);
+		}
+		.box div:nth-child(12){
+			transform:rotateY(330deg) translateZ(300px);
+		}
+		
+		@keyframes wp{
+			0%{
+				transform:  rotateX(15deg) rotateY(0deg);
+			}
+			50%{
+				transform:  rotateX(-15deg) rotateY(180deg);
+			}
+			100%{
+				transform:  rotateX(15deg) rotateY(360deg);
+			}
+		}
+	</style>
+	<body>
+		<div class="main">
+			<div class="box">
+				
+				<div>
+					<img src="img/angelababy.jpg" />
+				</div>
+				<div>
+					<img src="img/chenhao.jpg" />
+				</div>
+				<div>
+					<img src="img/fanbingbing.jpg" />
+				</div>
+				<div>
+					<img src="img/gaoyuanyuan.jpg" />
+				</div>
+				<div>
+					<img src="img/liushishi.jpg" />
+				</div>
+				<div>
+					<img src="img/liutao.jpg" />
+				</div>
+				<div>
+					<img src="img/liuyifei.jpg" />
+				</div>
+				<div>
+					<img src="img/tongliya.jpg" />
+				</div>
+				<div>
+					<img src="img/yangmi.jpg"  />
+				</div>
+				<div>
+					<img src="img/yangzi.jpg" />
+				</div>
+				<div>
+					<img src="img/zhangxinyi.jpg" />
+				</div>
+				<div>
+					<img src="img/zhaoliying.jpg" />
+				</div>
+				
+				
+			</div>
+			
+			
+		</div>
+	</body>
+</html>
